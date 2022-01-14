@@ -20,7 +20,7 @@ print(f'Desafio 2 - A Soma é igual à:', desafio2(2,5,7))
     O primeiro é um valor e  segundo um percentual (ex. 10%). Retorne o valor do primeiro número somado do aumento do percentual do mesmo.
 """
 def desafio3(num1, num2):
-    return num1 + num2 / 100
+    return num1 + (num1 * num2 / 100)
 print(f'Desafio 3 - A soma deles é:', desafio3(9,5))
 
 """
@@ -43,3 +43,20 @@ def desafio4(parametro_1):
     else:
         return parametro_1
 print(f'Desafio 4 - O resultado é: ', desafio4(105))
+
+# CORREÇÃO DO DESAFIO 4 - PROFESSOR
+print(f'\n ---- \n')
+print('Desafio 4:')
+def desafio4_Correcao(param_1):
+    if param_1 % 5 == 0 and param_1 % 3 == 0:
+        return 'FizzBuzz'
+    if param_1 % 2 == 0:
+        return 'Fizz'
+    if param_1 % 5 == 0:
+        return 'Buzz'
+    return param_1
+
+from random import randint
+for i in range(100):
+    aleatorio = randint(0,100)
+    print(f'O resultado é: ', desafio4_Correcao(aleatorio))
